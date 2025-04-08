@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9; /* Light background */
+            color: #333; /* Darker text for readability */
+        }
+        header {
+            background-color: #007BFF; /* Light blue header */
+            color: white; /* White text */
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f1f1f1; /* Light gray navigation bar */
+            padding: 10px 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007BFF; /* Light blue links */
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.1);
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF; /* Blue button */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+        .hero {
+            background: url('https://img.freepik.com/free-vector/library-with-bookcases-ladder-chair-lamp_107791-3023.jpg') 
+                        no-repeat center center/cover;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #007BFF;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .card {
+            background: white; /* White card */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            min-width: 280px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .card h3 {
+            padding: 10px;
+            text-align: center;
+            background: #007BFF; /* Light blue card header */
+            color: white; /* White text */
+            font-size: 1.2rem;
+        }
+        .card p {
+            padding: 15px;
+            font-size: 0.95rem;
+            color: #555; /* Medium gray text */
+            text-align: justify;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #007BFF; /* Light blue footer */
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                margin: 5px 0;
+            }
+            .nav-buttons {
+                margin-top: 10px;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Library Management System</h1>
+        <p>Your gateway to unlimited knowledge</p>
+    </header>
+    <nav>
+        <div class="nav-links" align="center">
+            <a href="index.html">Home</a>
+            <a href="books.jsp">Books</a>
+            <a href="feedback.jsp">Feed back</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="location.href='login.jsp'">Login</button>
+            <button onclick="location.href='register.jsp'">Register</button>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Our Library</h1>
+    </div>
+    <div class="container">
+        <h2>Explore Our Features</h2>
+        <div class="cards">
+            <div class="card" onclick="location.href='books.jsp'">
+                <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg" alt="Books">
+                <h3>Explore Books</h3>
+                <p>Browse through thousands of books available in different genres and categories.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/free-vector/college-students-sitting-desks-classroom-listening-teacher_74855-10516.jpg" alt="Students">
+                <h3>Manage Students</h3>
+                <p>Keep track of students and their borrowing history effortlessly.</p>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/free-vector/credit-card-transactions-payment-conditions-purchase-terms-online-banking-buyer-using-e-payment-technology-businesswoman-returning-money-loan_335657-850.jpg" alt="Transactions">
+                <h3>Track Transactions</h3>
+                <p>Monitor book check-ins and check-outs with real-time updates.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Library Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
